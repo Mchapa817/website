@@ -23,7 +23,12 @@
       <img onclick="Func()" id='cat' src = "tiger 4k.jpg" class="img-fluid" alt="Responsive Tiger image">
       <script>
         function Func() {
-          <P>Hello!</p>;
+          const para = document.createElement("p");
+const node = document.createTextNode("Hello");
+para.appendChild(node);
+
+const element = document.getElementById("cat");
+element.appendChild(para);
         }
       </script>
 
