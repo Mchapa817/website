@@ -20,7 +20,9 @@
         </div>
         
       </div>
+      <p>
       <img id='cat' src = "tiger 4k.jpg" class="img-fluid" alt="Responsive Tiger image">
+      </p>
       <p>Number of times this Tiger has been pet:</p>
       <p id="click-counter">0</p>
 
@@ -30,13 +32,12 @@
       <p>I could go on, but all I can say is go read the book! Completely is worth it!</p>
 
       <script>
-       $(function() {
-        let i = 0;
-        $('#cat').click(function() {
-    		  i++;
-          $('#click-counter').text(i);
-        });
-      });
+      document.getElementById ("cat").addEventListener ("click", updateCounter, false);
+    var count = 0;
+    function updateCounter() {
+        count++;  
+        document.getElementById("counted").innerHTML = "This has been clicked " + count + " times.";
+    }
       </script>
       
     </div>
